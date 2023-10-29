@@ -1,2 +1,4 @@
 # GameEngine
-The project showcase the Engine Development, Efficient C++, and Game programming Patterns inspired from Design Patterns. The project is developed through the guided instructions from the Tutor from my masters programe at Queen Mary
+
+
+The project showcases the Engine Development, Efficient C++, and Game programming Patterns inspired by Design Patterns. The project was developed through guided instructions from the Tutor from my master's programme at Queen Mary University of London

@@ -6,6 +6,8 @@ You can unzip the file and run the application by executing the "GameCReation.ex
 # Description
 This project was part of my coursework during my Master's at Queen Mary University of London. The project showcases the Engine Architecture, Efficient C++, and Game programming Patterns inspired by Design Patterns. Multiple Architectures like Entity, Components and Entity Component System Architectures were explored and the latest update includes the Entity Component System Architecture. Game programming patterns like flyweight, Observer, Command, Singleton, Component, and Service Locator have been implemented. The adaptive Game loop has been chosen and FPS is set at 60fps. Entity Component System Architecture is implemented using the ByteCode and Object Pool patterns. Further Behaviour Tree expansion for the project is being reviewed to make NPCs and enemies in the Game.
 
+![alt text](https://github.com/yadavraj26/GameEngine/blob/main/GameCreation/Git/Sample.PNG)
+
 # Status
 The project is currently under development. The Core code for Graphics, Game objects, Player, Input, Collision, and Sound has been implemented. Enemies module is yet to be implemented based on Behaviour Tree and Utility-based Agents.
 

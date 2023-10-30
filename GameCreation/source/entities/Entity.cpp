@@ -16,12 +16,11 @@
 Entity::Entity() :
 	isSpriteSheet(false),
 	deleted(false)
-	// X.B (1/2) Add the initialization the deleted flag to false
+	// Add the initialization the deleted flag to false
 {
 	position = std::make_shared<PositionComponent>();
 	addComponent(position);
 	state.next = nullptr;
-	//std::cout << sizeof(entityid);
 
 }
 
@@ -31,7 +30,6 @@ Entity::Entity(EntityType et) :
 {
 	position = std::make_shared<PositionComponent>();
 	addComponent(position);
-	std::cout << sizeof(double);
 }
 
 Entity::~Entity()
@@ -40,13 +38,6 @@ Entity::~Entity()
 
 
 
-
-/*void Entity::draw(Window* window)
-{
-	
-	//graphics->draw(window);
-	
-}*/
 
 void Entity::init(const std::string& textureFile, float scale)
 {

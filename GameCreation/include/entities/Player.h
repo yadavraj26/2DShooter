@@ -56,7 +56,6 @@ public:
 
 	//virtual void setNext(std::shared_ptr<Entity> nextItem)override{}
 
-	//virtual std::shared_ptr<Entity> getNext()override { return nullptr; } 
 
 
 private:

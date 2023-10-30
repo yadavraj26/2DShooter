@@ -5,7 +5,6 @@
 TTLSystem::TTLSystem()
 {
 	componentMask.turnOnBit(static_cast <int>(ComponentID::TTL));
-	std::cout << "adasdas";
 }
 
 void TTLSystem::update(Game* gameRef, Entity* entityRef, float elapsed)

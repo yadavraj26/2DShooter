@@ -15,26 +15,11 @@ class Observer
 public:
 	~Observer()
 	{
-		/*for (std::shared_ptr<Subject> subj : subjectList)
-		{
-			subj->removeObserver();
-		}*/
+	
 	}
 
 	virtual void onNotify(Entity* entityRef, EventID) =0;
 
-	/*void addSubject(std::shared_ptr<Subject> subject)
-	{
-		subjectList.push_back(subject);
-	}
-
-	void removeSubject(std::shared_ptr<Subject> subj)
-	{
-		subjectList.erase(std::find(subjectList.begin(), subjectList.end(), subj));
-	}
-
-protected:
-	std::vector<std::shared_ptr<Subject>> subjectList;*/
 };
 
 class Acheivements : public Observer

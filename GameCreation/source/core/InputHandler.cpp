@@ -2,7 +2,7 @@
 #include"../../include/core/InputHandler.h"
 #include"../../include/core/Game.h"
 #include "../../include/core/Command.h"
-//#include<memory>
+
 InputHandler::InputHandler() 
 {
 	pauseCommand = std::make_shared<PauseCommand>();

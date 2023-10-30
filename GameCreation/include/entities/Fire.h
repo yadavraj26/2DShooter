@@ -2,7 +2,7 @@
 #include"../../include/components/VelocityComponent.h"
 #include "../../include/components/TTLComponent.h"
 #include "Entity.h"
-//#include<memory>
+
 
 class VelocityComponent;
 class TTLComponent;
@@ -16,7 +16,7 @@ public:
 
 	int getTTL() const { return ttl->getTtl(); }
 
-	//std::shared_ptr<VelocityComponent> getVelocityComp() { return velocity; }
+
 
 	std::shared_ptr<TTLComponent> getTTLComponent() { return ttl; }
 
@@ -35,6 +35,5 @@ private:
 	std::shared_ptr<TTLComponent> ttl;
 	std::shared_ptr<VelocityComponent> velocity;
 
-	//Fire* next;
 };
 

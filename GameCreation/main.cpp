@@ -12,22 +12,22 @@ void adaptiveLoop(Game& game, float& lastTime, float updateTarget = 0)
     float current = game.getElapsed().asSeconds();
     float elapsedSeconds = current - lastTime;
 
-    // I.A: Three function calls for the game loop: handleInput, update and render.
-    //    Update and Render are frame-dependent
+    // Three function calls for the game loop: handleInput, update and render.
+    // Update and Render are frame-dependent
     game.handleInput();
     game.update(elapsedSeconds);
     game.render(elapsedSeconds);
 
 
-    // I.B: This loop is time-variable, set the game to sleep in order to get a 
-    //      constant framerate.
+    // This loop is time-variable, set the game to sleep in order to get a 
+    // constant framerate.
     float timeToWait = (updateTarget > elapsedSeconds) ? (updateTarget - elapsedSeconds) : 0;
     sf::sleep(sf::seconds(timeToWait));
-    // I.C: Calculate the current frame rate and set it to the game.
+    // Calculate the current frame rate and set it to the game.
 
     int fps = (int)(1 / elapsedSeconds);
     game.setFPS(fps);
-    // I.D: Call the function game.setFPS(int) to inform the game about the current FPS. Print this value to console as well.
+    // Call the function game.setFPS(int) to inform the game about the current FPS. Print this value to console as well.
     //system("Colour 02");
     //5std::cout<< "FPS: " << fps << " /tElapsedTime: " << elapsedSeconds <<std::endl;
 

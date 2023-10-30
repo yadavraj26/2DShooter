@@ -5,19 +5,7 @@
 
 void Tile::loadTile(int x, int y, float sc, std::shared_ptr<TileData> tileTexture)
 {
-	//load texture (default or by string).
-	/*if (textureFilename.size() > 0)
-	{
-		if (!texture->loadFromFile(textureFilename))
-		{
-			std::stringstream sss;
-			sss << "Texture file not found: " << textureFilename;
-			throw std::exception(sss.str().c_str());
-		}
-	}
-	else {
-		loadDefaultTexture();
-	}*/
+
 	textureData = tileTexture;
 
 

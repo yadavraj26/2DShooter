@@ -1,16 +1,14 @@
 #pragma once
-//#include <string>
+
 #include<memory>
 #include"Entity.h"
-//#include"Fire.h"
-//#include"StaticEntities.h"
+
 
 class Fire;
 
-/*#include<iostream>
-#include<array>*/
 
-
+// This defines the size of each entity pool.
+// For log and potions the entity pools is set at 10 and for fire the size is set at 3
 template <typename T>
 constexpr int getSize()
 	{
@@ -18,7 +16,7 @@ constexpr int getSize()
 		{
 			return 3;
 		}
-		return 8;
+		return 10;
 	}
 
 template <class T>
@@ -30,7 +28,6 @@ public:
 		firstFree = std::shared_ptr<T>(&pool[0]);
 		for (int i = 0; i < std::size(pool) - 1; i++)
 		{
-			std::cout << i << "\n";
 			pool[i].setNext(std::shared_ptr<T> (&pool[i + 1]));
 			pool[i].count = i;
 		}
@@ -57,19 +54,11 @@ public:
 
 private:
 	T pool[getSize<T>()];
-	//T pool[16];
+
 	std::shared_ptr<T> firstFree;
 };
 
 
-/*template <class T>
-class PotionPool :public EntityPool
-{
-public:
-	T changeToType(std::shared_ptr<Entity> ent)
-	{
-		reinterpret_cast<std::shared_ptr<T>> (ent);
-	}
-};*/
+
 
 

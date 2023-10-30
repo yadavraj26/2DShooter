@@ -17,11 +17,7 @@ public:
 		
 	}
 
-	/*
-	void removeObserver()
-	{
-		observer = nullptr;
-	}*/
+
 
 protected:
 	void notify(Entity* entityRef, EventID eventRef)

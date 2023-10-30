@@ -24,7 +24,7 @@ void SpriteSheet::releaseSheet()
 	}
 }
 
-void SpriteSheet::setSpriteSize(const sf::Vector2i& size)
+void SpriteSheet::setSpriteSize(const sf::Vector2u& size)
 {
 	spriteSize = size;
 }

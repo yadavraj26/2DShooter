@@ -47,7 +47,7 @@ public:
 	void draw(Window* windowRef) override;
 
 	const sf::Vector2f& getSpriteScale() override { return animSprite.getSpriteScale(); }
-	const sf::Vector2u& getTextureSize() override { return sf::Vector2u(animSprite.getSpriteSize());}
+	const sf::Vector2u& getTextureSize() override { return animSprite.getSpriteSize();}
 	void setSpritePosition(float x, float y) override { animSprite.getSprite().setPosition(x, y); }
 	
 	const Direction& getSpriteDirection() override { return animSprite.getSpriteDirection(); }

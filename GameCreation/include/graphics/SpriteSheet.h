@@ -20,12 +20,12 @@ public:
 	~SpriteSheet();
 
 	void releaseSheet();
-	void setSpriteSize(const sf::Vector2i& size);
+	void setSpriteSize(const sf::Vector2u& size);
 	void setSpriteScale(const sf::Vector2f& scale);
 	void setSpritePosition(const sf::Vector2f& pos);
 	void setSpriteDirection(const Direction& dir);
 
-	const sf::Vector2i& getSpriteSize() const {return spriteSize;}
+	const sf::Vector2u& getSpriteSize() const {return spriteSize;}
 	const sf::Vector2f& getSpriteScale() const { return spriteScale; }
 	const Direction& getSpriteDirection() const { return direction; }
 	const sf::Vector2f& getSpritePosition() const { return sprite.getPosition(); }
@@ -46,7 +46,7 @@ public:
 private:
 	sf::Texture texture;
 	sf::Sprite sprite;
-	sf::Vector2i spriteSize;
+	sf::Vector2u spriteSize;
 	sf::Vector2f spriteScale;
 	Direction direction;
 	std::string animType;

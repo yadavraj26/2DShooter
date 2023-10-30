@@ -5,12 +5,7 @@
 #include "../../include/Service/Subject.h"
 #include"../../include/sound/Audio.h"
 #include"../../include/entities/EntityPool.h"
-//#include "../../include/entities/StaticEntities.h"
-//#include"../../include/entities/Fire.h"
 
-//#include "../entities/Player.h"
-//#include<memory>
-//#include<vector>
 
 class Player;
 class InputHandler;
@@ -20,10 +15,7 @@ class Log;
 class Potion;
 class Fire;
 class AudioManager;
-//class Entity;
-//class Board;
-//class Player;
-//class Window;
+
 class Game
 {
 public:
@@ -70,9 +62,6 @@ public:
 
 	void bigArray(std::vector<std::shared_ptr<System>> system, float elapsed);
 
-	/*void deleteEntity(std::shared_ptr<Potion>);
-	void deleteEntity(std::shared_ptr<Log>);
-	void deleteEntity(std::shared_ptr<Fire>);*/
 
 
 	std::unique_ptr<EntityPool<Potion>> potionPool;

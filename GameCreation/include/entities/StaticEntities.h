@@ -13,23 +13,16 @@ public:
 	Potion() : Entity(EntityType::POTION), collider(std::make_shared<ColliderComponent>())
 	{
 		addComponent(collider);
-		//next = nullptr;
 	}
 	~Potion() { std::cout << "deleted"; }
 
-	/*void setNext(Potion* nextItem) override
-	{
-		next = nextItem;
-	}
 
-	Potion* getNext() { return next; }*/
 
 	void init(const std::string& textureFile, float scale) override
 	{
 		// Call the init() function in Entity to initalize this object
 		Entity::init(textureFile,scale);
 		state.data.type = EntityType::POTION;
-		//next = nullptr;
 		//  set the sprite location initially top left and bottom right corners of the bounding box for this entity. since there is no update needed 
 		graphics->setSpritePosition(getPosition().x, getPosition().y);
 		collider->setBoundingBox(getPosition(), Vector2f(getPosition().x + collider->getBoxSize().x, getPosition().y + collider->getBoxSize().y));
@@ -44,7 +37,7 @@ protected:
 
 private:
 	std::shared_ptr<ColliderComponent> collider;
-	//Potion* next;
+
 };
 
 

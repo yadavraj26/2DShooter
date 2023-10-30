@@ -18,10 +18,10 @@
 #include <iostream>
 #include<memory>
 
-// III.F Add the initialization (to 0) of the entity counter to the initalizers list of this constructor
+// Add the initialization (to 0) of the entity counter to the initalizers list of this constructor
 Game::Game() : paused(false), counter(0), totalPotions(0), potionsCount(0)
 {
-	// V.B: Create the unique pointer to the Input Handler object.
+	// Create the unique pointer to the Input Handler object.
 	input = std::make_unique<InputHandler>();
 	std::shared_ptr<InputSystem> inputSystem = std::make_shared<InputSystem>();
 	logicSystems.push_back(inputSystem);
@@ -75,8 +75,8 @@ std::shared_ptr<T> Game::buildEntityAt(std::shared_ptr<T> entity, const std::str
 
 void Game::buildBoard(size_t width, size_t height)
 {
-	// II.B Instantiate the unique pointer of type "Board". 
-	//     Use the constructor of Board that receives the width and the height for the game grid.
+	// Instantiate the unique pointer of type "Board". 
+	// Use the constructor of Board that receives the width and the height for the game grid.
 	board = std::make_unique<Board>(width, height);
 
 	//std::make_unique<Board> board(width, height);
@@ -181,25 +181,25 @@ void Game::init(std::vector<std::string> lines)
 			case '*':
 			{
 
-				// IV.B (1/4): Create the player shared pointer.
+				// Create the player shared pointer.
 				player = std::make_shared<Player>();
 
-				// IV.B (2/4): Call the function that initializes the Sprite Sheet with a single parameter, a const std::string& filename.
-				//			   This string should be "img/DwarfSpriteSheet_data.txt"
+				// Call the function that initializes the Sprite Sheet with a single parameter, a const std::string& filename.
+				// This string should be "img/DwarfSpriteSheet_data.txt"
 				player->initSpriteSheet("img/DwarfSpriteSheet_data.txt", "Idle", true, true);
 
-				// IV.B (3/4): Call the function that positions the sprite of the player in the board (Player::positionSprite). 
-				//			   Parameters are the row and column where this object goes in the board, the sprite width and height (const int Game::spriteWH) 
-				//			   and the scale for the tiles (const float Game::tileScale)
+				// Call the function that positions the sprite of the player in the board (Player::positionSprite). 
+				// Parameters are the row and column where this object goes in the board, the sprite width and height (const int Game::spriteWH) 
+				// and the scale for the tiles (const float Game::tileScale)
 				player->positionSprite(row, col, spriteWH, tileScale);
 
-				// IV.B (4/4): Call our function to add an entity to a game passing the player that has just been created.
+				// Call our function to add an entity to a game passing the player that has just been created.
 				addEntity(player);
 				player->setObserver(acheivementObserver);
 				player->getPlayerStateComp()->assignObserver(acheivementObserver);
 
 				//By default, entities stand on corridors:
-				// II.C (5/5) Use the function addTile from Board to add a CORRIDOR tile to this position.
+				//Use the function addTile from Board to add a CORRIDOR tile to this position.
 				board->addTile(col, row, tileScale, TileType::CORRIDOR);
 
 				break;
@@ -218,7 +218,7 @@ void Game::init(std::vector<std::string> lines)
 void Game::addEntity(std::shared_ptr<Entity> newEntity)
 {
 	// This function adds an entity, received by parameter, to the collection of entities.
-	// This must: i) Increase the entity counter (note: the very first entity should have a ID = 1).
+	// This must: Increase the entity counter (note: the very first entity should have a ID = 1).
 	// Assign the ID to the entity received by parameter. iii) Add the entity to the vector of entities of this class.
 	counter++;
 	newEntity->setID(counter);
@@ -231,7 +231,7 @@ void Game::handleInput()
 	// Then, call the "execute" method of the returned object to run this command.
 	auto command = input->handleInput();
 	if (command != nullptr) command->execute(*this);
-	// V.D: Call the function handleInput on the player's object.
+	// Call the function handleInput on the player's object.
 
 }
 
@@ -390,20 +390,7 @@ void Game::assignAcheivementOb()
 }
 
 
-/*void Game::deleteEntity(std::shared_ptr<Potion> potion)
-{
-	potionPool->hibernate(potion);
-}
 
-void Game::deleteEntity(std::shared_ptr<Log> log)
-{
-	logPool->hibernate(log);
-}
-
-void Game::deleteEntity(std::shared_ptr<Fire> fire)
-{
-	firePool->hibernate(fire);
-}*/
 
 
 template<class T>

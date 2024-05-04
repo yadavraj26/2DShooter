@@ -9,7 +9,7 @@ This project was part of my coursework during my Master's at Queen Mary Universi
 ![alt text](https://github.com/yadavraj26/GameEngine/blob/main/GameCreation/Git/Sample.PNG)
 
 # Status
-The project is currently under development. The Core code for Graphics, Game objects, Player, Input, Collision, and Sound has been implemented. Enemies module is yet to be implemented based on Behaviour Tree and Utility-based Agents.
+The Core code for Graphics, Game objects, Player, Input, Collision, and Sound has been implemented. Enemies module is yet to be implemented based on Behaviour Tree and Utility-based Agents.
 
 # Setup
 To build the project you need SFML 2.5.1 binaries. The SFML library has to be statically linked with all the libraries included in the linker. 
